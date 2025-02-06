@@ -14,7 +14,7 @@
         thead {
             background:#eee;  
         }
-        th{
+        th {
             border:1px solid #ddd; 
             padding:5px;  
             font-size:0.8em;
@@ -26,24 +26,45 @@
             padding:5px;  
             font-size:0.8em;
         }
+        body {
+            background-color: #eee;
+        }
+        mark {
+            background-color: rgb(91, 100, 197); 
+            font-weight:bold; 
+            color: #fff;
+        }
+        section {
+            margin-left: 30px;
+            padding-top: 10px;
+        }
         #container {
             width: 1200px;
             margin: 10px auto;
         }
         #side {
             width: 250px;
-            height: 1100px;
+            height: 1300px;
             background-color: #b0bada;
             float: left;
             padding-left: 30px;
             border-top-left-radius: 30px;
         }
         #contents {
-            width: 550px;
-            height: 700px;
-            float: left;
-            margin-top: 20px;
-            margin-left: 50px;
+            width: 750px;
+            height: 1300px;
+            background-color: #fff;
+            display: inline-block;
+        }
+        #detail {
+            position: relative;
+            top: 50px;
+            color: #fff;
+        }
+        #sns {
+            position: relative;
+            top: 80px;
+            color: #fff;
         }
         .str1 {
             color: rgb(44, 49, 120);
@@ -62,85 +83,111 @@
             margin-top: 50px;
             color: #fff;
         }
-        #detail {
-            position: relative;
-            top: 50px;
-            color: #fff;
-        }
-        #sns {
-            position: relative;
-            top: 80px;
-            color: #fff;
-        }
         .de1 {
+            width: 600px;
             border-style: solid;
-            color: rgb(170, 172, 195);
+            color: rgb(55, 62, 148);
             border-width: 1px;
+            float: left;
         }
         .de2 {
             width: 180px;
-            height: 5px;
+            height: 15px;
             border-style: solid;
-            border-color: rgb(70, 79, 175);
-            background-color: rgb(70, 79, 175);
+            border-color: rgb(44, 50, 108);
+            background-color: rgb(44, 50, 108);
             border-width: 3px;
-            border-radius: 5px;
+            border-radius: 10px;
             display: inline-block;
             position: absolute;
         }
         .de2_1{
             width: 140px;
-            height: 5px;
+            height: 15px;
             border-style: solid;
-            border-color: rgb(70, 79, 175);
-            background-color: rgb(70, 79, 175);
+            border-color: rgb(44, 50, 108);
+            background-color: rgb(44, 50, 108);
             border-width: 3px;
-            border-radius: 5px;
+            border-radius: 10px;
             display: inline-block;
             position: absolute;
         }
         .de2_2{
             width: 220px;
-            height: 5px;
+            height: 15px;
             border-style: solid;
-            border-color: rgb(70, 79, 175);
-            background-color: rgb(70, 79, 175);
+            border-color: rgb(44, 50, 108);
+            background-color: rgb(44, 50, 108);
             border-width: 3px;
-            border-radius: 5px;
+            border-radius: 10px;
             display: inline-block;
             position: absolute;
         }
         .de3{
             width: 350px;
-            height: 5px;
+            height: 15px;
             border-style: solid;
             border-color: rgb(207, 210, 237);
             background-color: rgb(207, 210, 237);
             border-width: 3px;
-            border-radius: 5px;
+            border-radius: 10px;
             display: inline-block;
             box-shadow: 1px 1px 5px rgb(207, 210, 237);
         }
+        .de4 {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border-style: solid;
+            border-color: #fff;
+            background-color: #fff;
+            box-shadow: 1px 1px 5px #bbb;
+            display: inline-block;
+            position: relative;
+            bottom: 41px;
+            left: 165px;
+        }
+        .de4_2 {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border-style: solid;
+            border-color: #fff;
+            background-color: #fff;
+            box-shadow: 1px 1px 5px #bbb;
+            display: inline-block;
+            position: relative;
+            bottom: 41px;
+            left: 131px;
+        }
+        .de4_3 {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border-style: solid;
+            border-color: #fff;
+            background-color: #fff;
+            box-shadow: 1px 1px 5px #bbb;
+            display: inline-block;
+            position: relative;
+            bottom: 41px;
+            left: 210px;
+        }
         .li1 {
             width: 300px;
-            height: 40px;
-            background-color: #fff;
+            height: 35px;
+            background-color: rgb(44, 50, 108);
             padding-left: 10px;
-            box-shadow: 1px 1px 5px #ccc;
-            line-height: 40px;
+            box-shadow: 1px 1px 5px rgb(179, 180, 197);
+            line-height: 35px;
             margin: 10px;
             padding-left: 20px;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
-            color: #1a1e55;
-            font-size: 14px;
-            font-weight: bold;
-        }
-        mark {
-            background-color: rgb(91, 100, 197); 
-            font-weight:bold; 
             color: #fff;
+            font-size: 15px;
+            font-weight: bold;
         }
 
     </style>
@@ -194,35 +241,44 @@
                     <div class="li1">
                         오라클 더 잘함
                     </div>   
+                    <br>
+                    <hr class="de1">
             </section>
-            <br>
-            <hr class="de1">
             
             <!-- 숙련도 -->
             <section>
                 <h2 class="subtitle str1">보유 기술</h2>
                 <li style="list-style: none;"> 
                     <ul>
-                        <li>java</li>
+                        <li style="font-size: 20px;">java</li>
                         <hr class="de2">
                         <div>
                             <hr class="de3">
+                            <div>
+                                <hr class="de4">
+                            </div>
                         </div>
-                        <li>oracle</li>
+                        <li style="font-size: 15px;">oracle</li>
                         <hr class="de2_1">
                         <div>
                             <hr class="de3">
+                            <div>
+                                <hr class="de4_2">
+                            </div>
                         </div>
-                        <li>html</li>
+                        <li style="font-size: 15px;">html</li>
                         <hr class="de2_2">
                         <div>
                             <hr class="de3">
+                            <div>
+                                <hr class="de4_3">
+                            </div>
                         </div>
                     </ul>                        
                 </li>
+                <br>
+                <hr class="de1">
             </section>
-            <br>
-            <hr class="de1">
 
             <!-- 학력 -->
             <section>
