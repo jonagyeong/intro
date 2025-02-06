@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온라인 프로필</title>
+    <style>
+        table {
+            width:70%; 
+            border:1px solid #222; 
+            border-collapse: collapse; 
+            margin-top: 20px;
+        }
+        thead {
+            background:#eee;  
+        }
+        th{
+            border:1px solid #ddd; 
+            padding:5px;  
+            font-size:0.8em;
+            background-color: rgb(70, 79, 175);
+            color: #fff; 
+        }
+        td {
+            border:1px solid #aaa; 
+            padding:5px;  
+            font-size:0.8em;
+        }
+        #container {
+            width: 1200px;
+            margin: 10px auto;
+        }
+        #side {
+            width: 250px;
+            height: 1100px;
+            background-color: #b0bada;
+            float: left;
+            padding-left: 30px;
+            border-top-left-radius: 30px;
+        }
+        #contents {
+            width: 550px;
+            height: 700px;
+            float: left;
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        .str1 {
+            color: rgb(44, 49, 120);
+        }
+        .box {
+            width: 200px;
+            height: 230px;
+            background-image: url("media/다운로드 (1).jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 30px;
+            left: 35px;
+        }
+        .box1 {
+            margin-top: 50px;
+            color: #fff;
+        }
+        #detail {
+            position: relative;
+            top: 50px;
+            color: #fff;
+        }
+        #sns {
+            position: relative;
+            top: 80px;
+            color: #fff;
+        }
+        .de1 {
+            border-style: solid;
+            color: rgb(170, 172, 195);
+            border-width: 1px;
+        }
+        .de2 {
+            width: 180px;
+            height: 5px;
+            border-style: solid;
+            border-color: rgb(70, 79, 175);
+            background-color: rgb(70, 79, 175);
+            border-width: 3px;
+            border-radius: 5px;
+            display: inline-block;
+            position: absolute;
+        }
+        .de2_1{
+            width: 140px;
+            height: 5px;
+            border-style: solid;
+            border-color: rgb(70, 79, 175);
+            background-color: rgb(70, 79, 175);
+            border-width: 3px;
+            border-radius: 5px;
+            display: inline-block;
+            position: absolute;
+        }
+        .de2_2{
+            width: 220px;
+            height: 5px;
+            border-style: solid;
+            border-color: rgb(70, 79, 175);
+            background-color: rgb(70, 79, 175);
+            border-width: 3px;
+            border-radius: 5px;
+            display: inline-block;
+            position: absolute;
+        }
+        .de3{
+            width: 350px;
+            height: 5px;
+            border-style: solid;
+            border-color: rgb(207, 210, 237);
+            background-color: rgb(207, 210, 237);
+            border-width: 3px;
+            border-radius: 5px;
+            display: inline-block;
+            box-shadow: 1px 1px 5px rgb(207, 210, 237);
+        }
+        .li1 {
+            width: 300px;
+            height: 40px;
+            background-color: #fff;
+            padding-left: 10px;
+            box-shadow: 1px 1px 5px #ccc;
+            line-height: 40px;
+            margin: 10px;
+            padding-left: 20px;
+            border-radius: 10px;
+            color: #1a1e55;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        mark {
+            background-color: rgb(91, 100, 197); 
+            font-weight:bold; 
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- 사이드바 -->
+        <div id="side">
+            <div id="namecard">
+                <div class="box"></div>
+                <div class="box1">
+                    <h1>Hong Gildong</h1>    
+                    <p>프로그래밍 재밌다</p>
+                </div>
+            </div>
+            <div id="detail">
+                <p>Incheon, Korea</p>
+                <p>test@naver.com</p>                                 
+            </div>
+            <div id="sns">
+                <h2>SNS</h2>
+                <h3><a href="#">클릭!</a></h3>
+            </div>           
+        </div>
+        <div id="contents">
+            <section>
+                <h2 class="subtitle str1">자기소개</h2>
+                <p><mark >프로그래밍</mark>에 관심이 많습니다. 
+                    <br>현재 열심히 공부하며 코딩 중!</p>
+                <br>
+                <hr class="de1">
+            </section>
+
+            <!-- 경력 -->
+            <section>
+                <h2 class="subtitle str1">Experience</h2>
+                    <div style="padding-left: 10px; font-weight: bold;">프론트 엔드</div>
+                    <div class="li1">
+                        HTML  CSS  JAVASCRIPT
+                    </div>
+                    <div class="li1">
+                        웹 페이지 잘 만든다
+                    </div>
+                    <div class="li1">
+                        다 잘함
+                    </div>
+                    <div style="padding-left: 10px; font-weight: bold;">백엔드</div>
+                    <div class="li1">
+                        자바 잘함
+                    </div>
+                    <div class="li1">
+                        오라클 더 잘함
+                    </div>   
+            </section>
+            <br>
+            <hr class="de1">
+            
+            <!-- 숙련도 -->
+            <section>
+                <h2 class="subtitle str1">보유 기술</h2>
+                <li style="list-style: none;"> 
+                    <ul>
+                        <li>java</li>
+                        <hr class="de2">
+                        <div>
+                            <hr class="de3">
+                        </div>
+                        <li>oracle</li>
+                        <hr class="de2_1">
+                        <div>
+                            <hr class="de3">
+                        </div>
+                        <li>html</li>
+                        <hr class="de2_2">
+                        <div>
+                            <hr class="de3">
+                        </div>
+                    </ul>                        
+                </li>
+            </section>
+            <br>
+            <hr class="de1">
+
+            <!-- 학력 -->
+            <section>
+                <h2 class="subtitle str1">Education</h2>
+                <table>
+                  <thead>
+                      <tr>
+                          <th>출신학교</th>
+                          <th>전공</th>
+                          <th>기간</th>
+                          <th>구분</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>좋은대학교</td>
+                          <td>좋은학과</td>
+                          <td>2010.3 ~ 2013.2</td>
+                          <td>졸업</td>
+                      </tr>
+                      <tr>
+                          <td>꽤좋은고등학교</td>
+                          <td> - </td>
+                          <td>2007.3 ~ 2009.2</td>
+                          <td>졸업</td>
+                      </tr>
+                  </tbody>
+                </table>
+            </section>
+        </div>        
+    </div>
+</body>
+</html>
