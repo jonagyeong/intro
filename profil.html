@@ -1,93 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>온라인 프로필</title>
+    <title>Document</title>
     <style>
-        table {
-            width:70%; 
-            border:1px solid #222; 
-            border-collapse: collapse; 
-            margin-top: 20px;
-        }
-        thead {
-            background:#eee;  
-        }
-        th {
-            border:1px solid #ddd; 
-            padding:5px;  
-            font-size:0.8em;
-            background-color: rgb(70, 79, 175);
-            color: #fff; 
-        }
-        td {
-            border:1px solid #aaa; 
-            padding:5px;  
-            font-size:0.8em;
-        }
         body {
             background-color: #eee;
         }
-        mark {
-            background-color: rgb(91, 100, 197); 
-            font-weight:bold; 
-            color: #fff;
-        }
-        section {
-            margin-left: 30px;
-            padding-top: 10px;
-        }
+
         #container {
-            width: 1200px;
+            width: 800px;
         }
+
+        #content {
+            width: 1470px;
+            height: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        #time {
+            font-weight: bold;
+            font-size: 30px;
+            color: #fff;
+            display: inline;
+            text-shadow: 0px 0px 3px #fff;
+        }
+
         #side {
             width: 250px;
-            height: 1300px;
-            background-color: #b0bada;
-            float: left;
-            padding-left: 30px;
-            border-top-left-radius: 30px;
-        }
-        #contents {
-            width: 750px;
-            height: 1300px;
-            background-color: #fff;
-            display: inline-block;
-        }
-        #detail {
-            position: relative;
-            top: 50px;
+            height: 700px;
             color: #fff;
+            padding-top: 50px;
+            padding-left: 50px;
+            position: fixed;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-image: url(media/img2.jpg);
+            box-shadow: 1px 1px 2px #ccc;
         }
-        #sns {
-            position: relative;
-            top: 80px;
+
+        #str1 {
+            margin-top: 20px;
+        }
+
+        #str2 {
+            font-weight: bold;
+        }
+
+        #cricle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: linear-gradient(155deg, rgb(140, 143, 207), rgb(173, 81, 130));
+            background-size: cover;
+            box-shadow: 0px 0px 5px #121831;
+        }
+
+        #popup:hover {
+            transform: rotateX(45deg);
+            width: 300px;
+            height: 100px;
+        }
+
+        #img1 {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            background-size: cover;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        #img2 {
+            top: 30px;
+            width: 20px;
+            height: 20px;
             color: #fff;
         }
 
-        .str1 {
-            color: rgb(44, 49, 120);
+        #name {
+            font-size: 30px;
+            font-weight: bold;
         }
-        .box {
-            width: 200px;
-            height: 230px;
-            background-image: url("media/다운로드 (1).jpg");
-            background-size: contain;
-            background-repeat: no-repeat;
-            position: relative;
-            top: 30px;
-            left: 35px;
+
+        #link {
+            margin-top: 30px;
         }
-        .box1 {
-            margin-top: 50px;
-            color: #fff;
-        }
-        .de1 {
+
+        #de {
             width: 600px;
             border-style: solid;
             color: rgb(55, 62, 148);
-            border-width: 1px;
+            border-width: 2px;
             float: left;
         }
         .de2 {
@@ -144,7 +151,7 @@
             box-shadow: 1px 1px 5px #bbb;
             display: inline-block;
             position: relative;
-            bottom: 41px;
+            bottom: 60px;
             left: 165px;
         }
         .de4_2 {
@@ -173,15 +180,36 @@
             bottom: 41px;
             left: 210px;
         }
+
+        #subtitle,
+        #Experience,
+        #skil,
+        #Education {
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 30px;
+            padding-left: 350px;
+            color: #121831;
+        }
+
+        #introduction {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+
+        mark {
+            background-color: #6173bd;
+            color: #fff;
+        }
+
         .li1 {
-            width: 300px;
+            width: 400px;
             height: 35px;
             background-color: rgb(44, 50, 108);
             padding-left: 10px;
             box-shadow: 1px 1px 5px rgb(179, 180, 197);
             line-height: 35px;
-            margin: 10px;
-            padding-left: 20px;
+            margin: 10px 0px 10px 0px;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
@@ -189,127 +217,108 @@
             font-size: 15px;
             font-weight: bold;
         }
-
+        #skil > div {
+            margin-bottom: -10px;
+        }
     </style>
 </head>
+
 <body>
     <div id="container">
-        <!-- 사이드바 -->
+        <!-- 사이드바-->
         <div id="side">
-            <div id="namecard">
-                <div class="box"></div>
-                <div class="box1">
-                    <h1>Hong Gildong</h1>    
-                    <p>프로그래밍 재밌다</p>
+            <div id="cricle">
+                <img src="media/img1.jpg" alt="" id="img1">
+            </div>
+            <br>
+            <div id="str1">
+                <div id="name">조나경</div>
+                <br>
+                <div id="str2">
+                    <div id="addr">Incheon Gyeong</div>
+                    <div id="Gmail">jonagyeong03@gmail.com</div>
+                </div>
+                <br>
+                <div>현재 시각</div>
+                <div id="time"></div>
+                <br>
+                <div id="link">
+                    <a href="#">
+                        <img src="media/instagram.png" alt="" id="img2">
+                    </a>
                 </div>
             </div>
-            <div id="detail">
-                <p>Incheon, Korea</p>
-                <p>test@naver.com</p>                                 
-            </div>
-            <div id="sns">
-                <h2>SNS</h2>
-                <h3><a href="#">클릭!</a></h3>
-            </div>           
         </div>
 
-        <div id="contents">
-            <section>
-                <h2 class="subtitle str1">자기소개</h2>
-                <p><mark >프로그래밍</mark>에 관심이 많습니다. 
-                    <br>현재 열심히 공부하며 코딩 중!</p>
-                <br>
-                <hr class="de1">
-            </section>
-
-            <!-- 경력 -->
-            <section>
-                <h2 class="subtitle str1">Experience</h2>
-                    <div style="padding-left: 10px; font-weight: bold;">프론트 엔드</div>
-                    <div class="li1">
-                        HTML  CSS  JAVASCRIPT
+    </div>
+    <!--내용-->
+    <div id="content">
+        <div id="subtitle">
+            자기소개
+            <div id="introduction">
+                <mark>프로그래밍</mark>에 관심이 많습니다! <br>
+                현재 열심히 공부중!
+            </div>
+        </div>
+        <div id="Experience">
+            Experience
+            <br>
+            <div style="font-weight: bold; font-size: 20px;">프론트 엔드</div>
+            <div class="li1">
+                HTML CSS JAVASCRIPT
+            </div>
+            <div class="li1">
+                웹 페이지 잘 만든다
+            </div>
+            <div class="li1">
+                다 잘함
+            </div>
+            <div style="font-weight: bold; font-size: 20px;">백엔드</div>
+            <div class="li1">
+                자바 잘함
+            </div>
+            <div class="li1">
+                오라클 더 잘함
+            </div>
+        </div>
+        <div id="skil">
+            skil
+            <br>
+            <div style="font-size: 20px;">java</div>
+            <hr class="de2">
+                <div>
+                <hr class="de3">
+                    <div>
+                        <hr class="de4">
                     </div>
-                    <div class="li1">
-                        웹 페이지 잘 만든다
+                </div>                      
+            <div style="font-size: 20px;">oracle</div>
+            <hr class="de2">
+                <div>
+                <hr class="de3">
+                    <div>
+                        <hr class="de4">
                     </div>
-                    <div class="li1">
-                        다 잘함
+                </div>                      
+            <div style="font-size: 20px;">html</div>
+            <hr class="de2">
+                <div>
+                <hr class="de3">
+                    <div>
+                        <hr class="de4">
                     </div>
-                    <div style="padding-left: 10px; font-weight: bold;">백엔드</div>
-                    <div class="li1">
-                        자바 잘함
-                    </div>
-                    <div class="li1">
-                        오라클 더 잘함
-                    </div>   
-                    <br>
-                    <hr class="de1">
-            </section>
-            
-            <!-- 숙련도 -->
-            <section>
-                <h2 class="subtitle str1">보유 기술</h2>
-                <li style="list-style: none;"> 
-                    <ul>
-                        <li style="font-size: 20px;">java</li>
-                        <hr class="de2">
-                        <div>
-                            <hr class="de3">
-                            <div>
-                                <hr class="de4">
-                            </div>
-                        </div>
-                        <li style="font-size: 20px;">oracle</li>
-                        <hr class="de2_1">
-                        <div>
-                            <hr class="de3">
-                            <div>
-                                <hr class="de4_2">
-                            </div>
-                        </div>
-                        <li style="font-size: 20px;">html</li>
-                        <hr class="de2_2">
-                        <div>
-                            <hr class="de3">
-                            <div>
-                                <hr class="de4_3">
-                            </div>
-                        </div>
-                    </ul>                        
-                </li>
-                <br>
-                <hr class="de1">
-            </section>
-
-            <!-- 학력 -->
-            <section>
-                <h2 class="subtitle str1">Education</h2>
-                <table>
-                  <thead>
-                      <tr>
-                          <th>출신학교</th>
-                          <th>전공</th>
-                          <th>기간</th>
-                          <th>구분</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>좋은대학교</td>
-                          <td>좋은학과</td>
-                          <td>2010.3 ~ 2013.2</td>
-                          <td>졸업</td>
-                      </tr>
-                      <tr>
-                          <td>꽤좋은고등학교</td>
-                          <td> - </td>
-                          <td>2007.3 ~ 2009.2</td>
-                          <td>졸업</td>
-                      </tr>
-                  </tbody>
-                </table>
-            </section>
-        </div>        
+                </div>                      
+            <div>수정중</div>
+        </div>
     </div>
 </body>
+
 </html>
+<script>
+    setInterval(() => {
+        let dateTime = new Date();
+        let time = dateTime.getHours() + ":" + dateTime.getMinutes() + ":" + dateTime.getSeconds();
+        let obj = document.getElementById("time");
+        obj.innerHTML = time
+    }, 1000);
+</script>
