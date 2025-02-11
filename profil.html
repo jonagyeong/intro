@@ -89,7 +89,21 @@
             margin-left: 20px;
             box-shadow: 2px 6px 4px #e0e0e0;
         }
+        
+        .rotate:hover {
+            transform: rotate(180deg);
+        }
+        
         .box>img {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding: 10px;
+            transition: transform 1s;
+        }
+
+
+        a>img {
             width: 40px;
             height: 40px;
             text-align: center;
@@ -268,13 +282,15 @@
             </div>
             <div id="box">
                 <span class="box">
-                    <img src="media/instagram.png" alt="">
+                    <a href="https://www.instagram.com/jnk12_34?igsh=YjZtdm9lZG5ib3Mz">
+                        <img src="media/instagram.png" alt="">
+                    </a>
                 </span>
                 <span class="box">
-                    <img src="media/loading.png" alt="">
+                    <img src="media/loading.png" alt="" class="rotate" onclick="fnEditing()">
                 </span>
                 <span class="box">
-                    <img src="media/loading.png" alt="">
+                    <img src="media/loading.png" alt="" class="rotate" onclick="fnEditing()">
                 </span>
             </div>
         </div>
@@ -309,9 +325,9 @@
             <!-- 오른쪽 사이드 -->
     
              <div id="rightSide_img">
-                    <div id="portfolio">PORTFOLIO</div>
+                    <div id="portfolio" onclick="fnEditing()">PORTFOLIO</div>
              </div>
-             <div id="rightSide"> 수정중! </div>
+             <div id="rightSide" onclick="fnEditing()"> 수정중! </div>
              <div id="timebox">
                 <span>현재 시각</span> <div id="time"></div>
              </div>
@@ -328,4 +344,8 @@
         let obj = document.getElementById("time");
         obj.innerHTML = time
     }, 1000);
+
+    function fnEditing() {
+        alert("수정중입니다!");
+    }
 </script>
