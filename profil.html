@@ -6,8 +6,8 @@
     <title>Document</title>
     <style>
         #container {
-            width: 100%;
-            padding: 30px;
+            width: 1220px;
+            margin: 80px auto;
         }
 
         /* Side */
@@ -21,8 +21,10 @@
             border-radius: 15px;
             box-shadow: 1px 6px 6px #e0e0e0;
             text-align: center;
-            display: inline-block;
-            position: relative;
+            /* display: inline-block;
+            position: relative; */
+            float: left;
+            margin-right: 30px;
         }
         #profil {
             width: 180px;
@@ -53,88 +55,54 @@
         }
 
 
-        /* Introduce */
+        /* contents */
+
+        #contents {
+            display: flex;
+            flex-direction: column;
+        }
 
         #Introduce {
-            width: 650px;
-            height: 130px;
+            width: 500px;
+            height: 150px;
             background-color: #f1f1f1fa;
             border: 4px solid #fff;
             border-collapse: collapse;
             border-radius: 15px;
             box-shadow: 1px 6px 6px #e0e0e0;
-            position: absolute;
+            padding: 20px;
             display: inline-block;
-            margin-left: 45px;
-            top: 40px;
-            padding: 30px;
+            /* float: left; */
         }
         #intro {
-            font-size: 20px;
+            font-size: 25px;
             font-weight: bold;
-            margin: 0 0 30px 0;
-            position: relative;
-        }
-        #box {
-            left: 430px;
-            bottom: 60px;
-            position: absolute;
-        }
-        .box {
-            width: 60px;
-            height: 60px;
-            background-color: #fff;
-            border-radius: 10px;
-            display: inline-block;
-            margin-left: 20px;
-            box-shadow: 2px 6px 4px #e0e0e0;
+            margin-bottom: 40px;
         }
         
-        .rotate:hover {
-            transform: rotate(360deg);
-        }
-        
-        .box>img {
-            width: 40px;
-            height: 40px;
-            text-align: center;
-            padding: 10px;
-            transition: transform 1s;
-        }
 
-
-        a>img {
-            width: 40px;
-            height: 40px;
-            text-align: center;
-            padding: 10px;
-        }
-
-        /* contents */
-
-       #contents {
-            width: 650px;
-            height: 360px;
+        #menu {
+            width: 500px;
+            height: 390px;
             background-color: #ffffff;
             border: 4px solid #fff;
             border-collapse: collapse;
             border-radius: 15px;
             box-shadow: 1px 6px 6px #e0e0e0;
-            position: absolute;
-            display: inline-block;
-            padding: 30px;
-            margin-top: 230px;
-            margin-left: 45px;
-            top: 40px;
-       } 
+            padding: 20px;
+            /* margin-left: 30px; */
+            float: left;
+            margin-top: 20px;
+            /* display: inline-block; */
+        }
 
-       #Skils {
-            font-size: 20px;
+        #Skils {
+            font-size: 25px;
             font-weight: bold;
-            margin: 0 0 30px 0;
-       }
+            margin-bottom: 30px;
+        }
 
-       #line {
+        #line {
             width: 300px;
             height: 15px;
             border-radius: 30px;
@@ -142,108 +110,128 @@
             box-shadow: inset 2px 2px 4px #a1a1a1;
             margin: 10px 0 10px 0;
             position: relative;
-       }
+        }
 
-       #line1 {
-            width: 130px;
-            height: 15px;
-            border-radius: 30px;
-            background-color: #292929;
-            position: absolute;
-       }
-       #line2 {
-            width: 180px;
-            height: 15px;
-            border-radius: 30px;
-            background-color: #292929;
-            position: absolute;
-       }
-       #lineCricle1 {
-            width: 20px;
-            height: 20px;
-            top: -3px;
-            left: 120px;
-            border-radius: 50%;
-            background-color: #fff;
-            box-shadow: 1px 3px 6px #a7a7a7;
-            position: absolute;
-       }
-       #lineCricle2 {
-            width: 20px;
-            height: 20px;
-            top: -3px;
-            left: 170px;
-            border-radius: 50%;
-            background-color: #fff;
-            box-shadow: 1px 3px 6px #a7a7a7;
-            position: absolute;
-       }
+        #line1 {
+                width: 130px;
+                height: 15px;
+                border-radius: 30px;
+                background-color: #292929;
+                position: absolute;
+        }
+        #line2 {
+                width: 180px;
+                height: 15px;
+                border-radius: 30px;
+                background-color: #292929;
+                position: absolute;
+        }
+        #lineCricle1 {
+                width: 20px;
+                height: 20px;
+                top: -3px;
+                left: 120px;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: 1px 3px 6px #a7a7a7;
+                position: absolute;
+        }
+        #lineCricle2 {
+                width: 20px;
+                height: 20px;
+                top: -3px;
+                left: 170px;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: 1px 3px 6px #a7a7a7;
+                position: absolute;
+        }
 
-       /* 오른쪽 사이드 */
+        /* box */
 
-       #rightSide_img {
-            width: 180px;
+        #box {
+            margin-left: 30px;
+            float: right;
+        }
+
+        #box1, #box2, #box3 {
+            margin-bottom: 30px;
+        }
+
+        #box1 {
+            width: 300px;
             height: 150px;
             line-height: 150px;
             text-align: center;
-            color: #fff;
-            font-weight: bold;
-            font-size: 25px;
-            background-image: url(media/image.png);
-            background-size: cover;
+            border: 4px solid #fff;
+            border-collapse: collapse;
+            border-radius: 15px;
+            box-shadow: 1px 6px 6px #e0e0e0;
+            background-image: url("media/image.png");
             background-position: center;
-            border: 4px solid #fff;
-            border-collapse: collapse;
-            border-radius: 15px;
-            box-shadow: 1px 6px 6px #e0e0e0;
-            position: absolute;
-            display: inline-block;
-            padding: 30px;
-            margin-left: 1150px;
-            top: 40px;
-       }
-       #rightSide {
-            width: 180px;
+            background-size: cover;
+        }
+        #box1>#portfolio {
+            color: #fff;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #box2 {
+            width: 300px;
             height: 150px;
             line-height: 150px;
             text-align: center;
-            font-weight: bold;
-            font-size: 23px;
             border: 4px solid #fff;
             border-collapse: collapse;
-            background-color: #f1f1f1fa;
-            border-radius: 15px;
             box-shadow: 1px 6px 6px #e0e0e0;
-            position: absolute;
-            display: inline-block;
-            padding: 30px;
-            margin-left: 1150px;
-            top: 300px;
-       }
-       #timebox {
-            width: 180px;
-            height: 80px;
+            border-radius: 15px;
+            background-color: #eee;
+        }
+        #box3 {
+            width: 300px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
             border: 4px solid #fff;
             border-collapse: collapse;
-            background-color: #292929;
             border-radius: 15px;
             box-shadow: 1px 6px 6px #e0e0e0;
-            color: #fff;
-            padding: 30px;
-            position: absolute;
-            display: inline-block;
-            margin-left: 1150px;
-            top: 550px;
-            text-align: center;
-       }
-       #time {
-            margin-top: 5px;
-            text-align: center;
-            text-shadow: 0px 0px 5px #aaa;
-            font-size: 35px;
+            background-color: #ffffff;
+            position: relative;
+        }
+        #time {
+            font-size: 28px;
             font-weight: bold;
-       }
+            text-shadow: 0px 0px 5px #eee;
+        }
 
+        #icon {
+            left: 430px;
+            bottom: 60px;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #fffffffa;
+            border: 4px solid #fff;
+            border-collapse: collapse;
+            border-radius: 10px;
+            box-shadow: 1px 6px 6px #e0e0e0;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        #box3>#icon {
+            
+        }
+        .icon>img, a>img {
+            width: 40px;
+            height: 40px;
+            top: 5px;
+            left: 5px;
+            margin-left: 10px;
+        }
+
+        
 
     </style>
 </head>
@@ -268,40 +256,26 @@
             <div> 수정중! </div>
         </div>
 
-        <!-- 자기소개 -->
-
-        <div id="Introduce">
-            <div id="intro">
-                Introduce
-            </div>
-            <div class="str">
-                프로그래밍에 관심이 많습니다!
-            </div>
-            <div class="str">
-                현재 열심히 공부중!
-            </div>
-            <div id="box">
-                <span class="box">
-                    <a href="https://www.instagram.com/jnk12_34?igsh=YjZtdm9lZG5ib3Mz">
-                        <img src="media/instagram.png" alt="">
-                    </a>
-                </span>
-                <span class="box">
-                    <img src="media/loading.png" alt="" class="rotate" onclick="fnEditing()">
-                </span>
-                <span class="box">
-                    <img src="media/loading.png" alt="" class="rotate" onclick="fnEditing()">
-                    
-                </span>
-            </div>
-        </div>
-
         <!-- contents -->
-
+        
         <div id="contents">
-            <div id="Skils">
-                Skils
+            <!-- Introduce -->
+            <div id="Introduce">
+                <div id="intro">
+                    Introduce
+                </div>
+                <div class="str">
+                    프로그래밍에 관심이 많습니다!
+                </div>
+                <div class="str">
+                    현재 열심히 공부중!
+                </div>
             </div>
+            
+            <div id="menu">
+                <div id="Skils">
+                    Skils
+                </div>
                 <div>java</div>
                 <div id="line">
                     <div id="line1">
@@ -322,20 +296,37 @@
                 </div>
                 <div>수정중!</div>
             </div>
-
-            
+            <!-- box -->
+    
         </div>
-        <!-- 오른쪽 사이드 -->
-
-         <div id="rightSide_img">
-                <div id="portfolio" onclick="fnEditing()">PORTFOLIO</div>
-         </div>
-         <div id="rightSide" onclick="fnEditing()"> 수정중! </div>
-         <div id="timebox">
-            <span>현재 시각</span> <div id="time"></div>
-         </div>
+        <div id="box">
+            <div id="box1">
+                <div id="portfolio">
+                    PORTFOLIO
+                </div>
+            </div>
+            <div id="box2">
+                <span id="time"></span>
+            </div>
+            <div id="box3">
+                <div id="icon">
+                    <span class="icon">
+                        <a href="https://www.instagram.com/jnk12_34?igsh=YjZtdm9lZG5ib3Mz">
+                            <img src="media/instagram.png" alt="">
+                        </a>
+                    </span>
+                    <span class="icon">
+                        <img src="media/loading.png" alt="" class="rotate" onclick="fnEditing()">
+                    </span>
+                    <span class="icon">
+                        <img src="media/loading.png" alt="" class="rotate" onclick="fnEditing()">
+                    </span>
+                </div>
+            </div>
+        </div>
 
     </div>
+
 </body>
 </html>
 <script>
@@ -343,9 +334,8 @@
         let dateTime = new Date();
         let time = dateTime.getHours() + ":" + dateTime.getMinutes() + ":" + dateTime.getSeconds();
         let obj = document.getElementById("time");
-        obj.innerHTML = time
+        obj.innerHTML = time;
     }, 1000);
-
     function fnEditing() {
         alert("수정중입니다!");
     }
