@@ -112,15 +112,11 @@
             display: inline-block;
         }
 
-        .select {
-            display: inline;
-            margin: 0 10px 0 10px;
+        button {
+            border: none;
+            background-color: #fafafafa;
+            font-size: 15px;
 
-        }
-
-        .menu {
-            text-align: center;
-            line-height: 30px;
         }
 
         #menu {
@@ -135,17 +131,23 @@
             float: left;
         }
 
-        .select1:hover {
+        .select {
+            line-height: 10px;
+            font-size: 20px;
+        }
+
+        .select:hover{
             font-weight: bold;
         }
 
-        .select2:hover {
-            font-weight: bold;
-        }
 
-        #menu1,
-        #menu2 {
-            display: none;
+
+        #menu1>#menu1_str,
+        #menu2>#menu2_str {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            display: block;
         }
 
         #line {
@@ -194,6 +196,23 @@
             background-color: #fff;
             box-shadow: 0px 3px 6px #a7a7a7;
             position: absolute;
+        }
+
+        table {
+            width: 70%;
+            border: 1px solid #222;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #eee;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-size: 0.8em;
         }
 
         /* box */
@@ -356,16 +375,60 @@
 
             <div id="selectmenu">
                 <div id="menubox">
-                    <label><span onclick="fnMenu(1)" class="select1">skils</span></label>
-                    <label><span onclick="fnMenu(2)" class="select2">education</span></label>
+                    <button onclick="fnMenu(1)" class="select">skils</button>
+                    <button onclick="fnMenu(2)" class="select">education</button>
                 </div>
             </div>
             <div id="menu">
                 <div id="menu1">
-                    skils
+                    <div id="menu1_str">skils</div>
+                    <div>java</div>
+                    <div id="line">
+                        <div id="line1">
+                            <div id="lineCricle1"></div>
+                        </div>
+                    </div>
+                    <div>oracle</div>
+                    <div id="line">
+                        <div id="line1">
+                            <div id="lineCricle1"></div>
+                        </div>
+                    </div>
+                    <div>html/css</div>
+                    <div id="line">
+                        <div id="line2">
+                            <div id="lineCricle2"></div>
+                        </div>
+                    </div>
                 </div>
                 <div id="menu2">
-                    education
+                    <div id="menu2_str">education</div>
+                    <table>
+                        <caption>학력 사항</caption>
+                        <thead>
+                            <tr>
+                                <th>출신학교</th>
+                                <th>전공</th>
+                                <th>기간</th>
+                                <th>구분</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>좋은대학교</td>
+                                <td>좋은학과</td>
+                                <td>2010.3 ~ 2013.2</td>
+                                <td>졸업</td>
+                            </tr>
+                            <tr>
+                                <td>꽤좋은고등학교</td>
+                                <td> - </td>
+                                <td>2007.3 ~ 2009.2</td>
+                                <td>졸업</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                 </div>
             </div>
 
@@ -434,15 +497,20 @@
         location.href = "portfolio.html";
     }
 
+    window.addEventListener('DOMContentLoaded', function () {
+        fnMenu(1);
+    });
     function fnMenu(num) {
         let menu1 = document.getElementById("menu1");
         let menu2 = document.getElementById("menu2");
-        let obj = num;
+
+        menu1.style.display = "none";
+        menu2.style.display = "none";
 
         // 선택한 내용 보이기
-        if (obj === "1") {
+        if (num === 1) {
             menu1.style.display = "block";
-        } else if (obj === "2") {
+        } else if (num === 2) {
             menu2.style.display = "block";
         }
     }
