@@ -331,14 +331,11 @@
             </div>
             
             <div id="selectmenu">
-                <div id="menubox">
-                    <div class="menu">skils</div>
+                <div id="menubox" onclick="fnChangemenu1()">
+                    <div class="menu_skils">skils</div>
                 </div>
                 <div id="menubox" onclick="fnChangemenu2()">
-                    <div class="menu">education</div>
-                </div>
-                <div id="menubox">
-                    <div class="menu">menu</div>
+                    <div class="menu_education">education</div>
                 </div>
             </div>
             
@@ -454,5 +451,9 @@
     }
     function fnPopUp1() {
         location.href="portfolio.html";
+    }
+    function fnChangemenu1() {
+        let education = document.querySelector(".menu_skils");
+        education.display = "none";
     }
 </script>
