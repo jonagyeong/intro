@@ -121,6 +121,10 @@
             margin-bottom: 40px;
         }
 
+        #Introduce>.str {
+            font-size: 13px;
+        }
+
         #selectmenu {
             width: 500px;
             height: 10px;
@@ -161,16 +165,14 @@
             float: left;
         }
 
-        .select {
+        .select1, .select2 {
             line-height: 10px;
-            font-size: 20px;
+            font-size: 18px;
         }
 
-        .select:hover{
+        .select1:hover, .select2:hover{
             font-weight: bold;
         }
-
-
 
         #menu1>#menu1_str,
         #menu2>#menu2_str {
@@ -404,7 +406,7 @@
                     현재 열심히 공부중!
                 </div>
                 <div id="toggle">
-                    <div id="toggle_cricle" onclick="fnEditing()">
+                    <div id="toggle_cricle" onclick="fnEditing1()">
 
                     </div>
                 </div>
@@ -412,8 +414,8 @@
 
             <div id="selectmenu">
                 <div id="menubox">
-                    <button onclick="fnMenu(1)" class="select">skils</button>
-                    <button onclick="fnMenu(2)" class="select">education</button>
+                    <button onclick="fnMenu(1)" class="select1">skils</button>
+                    <button onclick="fnMenu(2)" class="select2">education</button>
                 </div>
             </div>
             <div id="menu">
@@ -531,6 +533,9 @@
     }, 1000);
     function fnEditing() {
         alert("수정중입니다!");
+    }
+    function fnEditing1() {
+        alert("라이트 모드/ 다크 모드 추가중!");
     }
     function fnPopUp1() {
         location.href = "portfolio.html";
