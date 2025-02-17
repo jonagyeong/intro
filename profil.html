@@ -98,21 +98,19 @@
             box-shadow: 0px 3px 6px #e0e0e0;
             padding: 20px;
             margin-bottom: 20px;
-        }
-        
-        #menu_str {
-            color: #9a9a9a;
-            display: inline-block;
-            margin-left: 50px;
+            float: left;
         }
 
         #menubox {
-            width: 80px;
-            height: 30px;
             text-align: center;
-            line-height: 30px;
-            /* background-color: #eee; */
+            line-height: 10px;
             display: inline-block;
+        }
+
+        .select {
+            display: inline;
+            margin: 0 10px 0 10px;
+
         }
 
         .menu {
@@ -130,12 +128,6 @@
             box-shadow: 0px 3px 6px #e0e0e0;
             padding: 20px;
             float: left;
-        }
-
-        #Skils {
-            font-size: 25px;
-            font-weight: bold;
-            margin-bottom: 30px;
         }
 
         #line {
@@ -255,10 +247,15 @@
             margin-left: 20px;
             font-weight: bold;
         }
+        #box4>span {
+            margin-top: 50px;
+            margin-left: 20px;
+            color: #404040;
+        }
         #box4>.line {
-            border: 1px solid #cccccc;
+            border: 1px solid #ededed;
             width: 250px;
-            margin-top: 30px;
+            margin-bottom: 30px;
             margin-left: 20px;
         }
 
@@ -331,62 +328,18 @@
             </div>
             
             <div id="selectmenu">
-                <div id="menubox" onclick="fnChangemenu1()">
-                    <div class="menu_skils">skils</div>
-                </div>
-                <div id="menubox" onclick="fnChangemenu2()">
-                    <div class="menu_education">education</div>
+                <div id="menubox">
+                    <label><span onclick="fnMenu(1)" class="select">skils</span></label>
+                    <label><span onclick="fnMenu(2)" class="select">education</span></label>
                 </div>
             </div>
-            
             <div id="menu">
                 <div id="Skils">
-                    Skils
+                    skils
                 </div>
-                <div>java</div>
-                <div id="line">
-                    <div id="line1">
-                        <div id="lineCricle1"></div>
-                    </div>
+                <div id="Education">
+                    education
                 </div>
-                <div>oracle</div>
-                <div id="line">
-                    <div id="line1">
-                        <div id="lineCricle1"></div>
-                    </div>
-                </div>
-                <div>html/css</div>
-                <div id="line">
-                    <div id="line2">
-                        <div id="lineCricle2"></div>
-                    </div>
-                </div>
-                <br>
-                <div>수정중...</div>
-
-                <div id="education">
-                    deucation
-                </div>
-                <div>java</div>
-                <div id="line">
-                    <div id="line1">
-                        <div id="lineCricle1"></div>
-                    </div>
-                </div>
-                <div>oracle</div>
-                <div id="line">
-                    <div id="line1">
-                        <div id="lineCricle1"></div>
-                    </div>
-                </div>
-                <div>html/css</div>
-                <div id="line">
-                    <div id="line2">
-                        <div id="lineCricle2"></div>
-                    </div>
-                </div>
-                <br>
-                <div>수정중...</div>
             </div>
                 
         </div>
@@ -419,6 +372,7 @@
             </div>
             <div id="box4">
                 <div class="memo">Memo</div>
+                <span>memo</span>
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -452,8 +406,16 @@
     function fnPopUp1() {
         location.href="portfolio.html";
     }
-    function fnChangemenu1() {
-        let education = document.querySelector(".menu_skils");
-        education.display = "none";
+
+    function fnMenu(num) {
+        let education = getElementById("Education")
+        let skils = getElementById("Skils")
+        if(num==1) {
+            skils.style.display = "block"
+            education.style.display = "none"
+        } else if (num==2) {
+            education.style.display = "block";
+        }
     }
+    
 </script>
