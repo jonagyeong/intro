@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
     <title>Document</title>
     <style>
         #container {
@@ -50,11 +50,13 @@
             font-weight: bold;
             margin-bottom: 50px;
         }
+        
 
         #addr,
-        #mail {
+        #mail, #phone {
             text-align: left;
             margin-left: 40px;
+            margin-bottom: 50px;
         }
 
 
@@ -308,7 +310,9 @@
             <div id="mail">
                 jonagyeong03@gmail.com
             </div>
-            <div> 수정중! </div>
+            <div id="phone">
+                010-1234-5678
+            </div>
         </div>
 
         <!-- contents -->
@@ -363,10 +367,10 @@
                         <img src="media/instagram.png" alt="인스타그램">
                     </a>
                 </div>
-                <div class="icon">
+                <div class="icon" onclick="fnEditing()">
                     <img src="media/loading.png" alt="">
                 </div>
-                <div class="icon">
+                <div class="icon" onclick="fnEditing()">
                     <img src="media/loading.png" alt="">
                 </div>
             </div>
