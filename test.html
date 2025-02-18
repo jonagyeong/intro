@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 클릭했을 때 애니메이션 넣기 */
+        .light-mode {
+            background-color: #fff;
+            color: black;
+        }
+        .dark-mode {
+            background-color: #222222;
+            color: #fff;
+        }
+        .box {
+            width: 140px;
+            height: 70px;
+            border-radius: 50px;
+            background-color: #eee;
+            position: relative;
+        }
+        .cricle {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            animation: move 2s
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(68px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="cricle" onclick="fnColor()"></div>
+    </div>
+    <div>
+        <span>라이트 모드</span>
+    </div>
+</body>
+</html>
+<script>
+    function fnColor() {
+        let body = document.body;
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+
+        let button = document.querySelector(".box")
+        if(body.classList.contains('dark-mode')) {
+            
+        }
+    }
+</script>

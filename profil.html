@@ -405,7 +405,7 @@
                 <div class="str">
                     현재 열심히 공부중!
                 </div>
-                <div id="toggle"  onclick="fnEditing1()">
+                <div id="toggle" onclick="fncolor()">
                     <div id="toggle_cricle">
 
                     </div>
@@ -560,6 +560,13 @@
         } else if (num === 2) {
             menu2.style.display = "block";
         }
+    }
+    function fnColor() {
+        let body = document.body;
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+        
+        let button = document.querySelector("toggle");
     }
 
 </script>
