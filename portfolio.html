@@ -42,21 +42,40 @@
             float: left;
         }
         
-        #box {
+        #box1, #box2 {
             width: 800px;
             height: 400px;
             background-color: #eee;
         }
-        .box1 {
+        #box1>.box1 {
+            width: 800px;
+            height: 400px;
             background-image: url("media/BOX1.jpg");
             background-size: cover;
         }
-        .box2 {
+        #box1>.box2 {
+            width: 800px;
+            height: 400px;
             background-image: url("media/BOX2.jpg");
             background-size: cover;
         }
-        .box3 {
+        #box1>.box3 {
+            width: 800px;
+            height: 400px;
             background-image: url("media/BOX3.jpg");
+            background-size: cover;
+        }
+
+        #box2>.box1 {
+            background-image: url("");
+            background-size: cover;
+        }
+        #box2>.box2 {
+            background-image: url("");
+            background-size: cover;
+        }
+        #box2>.box3 {
+            background-image: url("");
             background-size: cover;
         }
     </style>
@@ -65,7 +84,12 @@
 <body>
     <div id="container">
         <div id="imgbox">
-            <div id="box">
+            <div id="box1">
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+            </div>
+            <div id="box2">
                 <div class="box1"></div>
                 <div class="box2"></div>
                 <div class="box3"></div>
