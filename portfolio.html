@@ -8,7 +8,7 @@
     <style>
         #container {
             width: 1220px;
-            margin: 50px auto;
+            margin: 80px auto;
         }
 
         #Side {
@@ -28,75 +28,67 @@
 
         #con_str {
             font-weight: bold;
-            margin: 70px auto 10px 10px;
+            margin: 70px auto 70px auto;
+            font-size: 30px;
         }
-
-        #box {
-            width: 500px;
-            height: 300px;
-            /* overflow: hidden; */
-            background-image: url("media/1.jpg");
-            background-size: cover;
-
+        
+        #str_contents {
+            margin: 70px 30px 0 30px;
+            text-align: left;
+            font-size: 13px;
         }
-
-        #box1 {
-            background-color: #ccc;
-            width: 100px;
-            height: 100px;
-        }
-
-        #menu {
-            width: 800px;
-            height: 50px;
-            background-color: #000;
-            margin-left: 20px;
-        }
-        .menu_select {
-            display: inline-block;
-            
-            color: #fff;
-            line-height: 50px;
-        }
-
-        #contents {
+        
+        #imgbox {
             float: left;
-            margin-left: 20px;
+        }
+        
+        #box {
+            width: 800px;
+            height: 400px;
+            background-color: #eee;
+        }
+        .box1 {
+            background-image: url("media/BOX1.jpg");
+            background-size: cover;
+        }
+        .box2 {
+            background-image: url("media/BOX2.jpg");
+            background-size: cover;
+        }
+        .box3 {
+            background-image: url("media/BOX3.jpg");
+            background-size: cover;
         }
     </style>
 </head>
 
 <body>
     <div id="container">
-        
-        <div id="menu">
-            <div class="menu_select" onclick="fnSideContent(1)">1</div>
-            <div class="menu_select" onclick="fnSideContent(2)">2</div>
-            <div class="menu_select" onclick="fnSideContent(3)">3</div>
+        <div id="imgbox">
+            <div id="box">
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+            </div>
         </div>
-        
         <div id="Side">
-            <div id="con_str">PORTFOLIO</div>
-            <div id="str_1">
-                <br>
+            <div id="con_str">
+                PORTFOLIO
+            </div>
                 <div>내용1</div>
                 <div id="str_contents">
                     Lorem ipsum dolor sit amet, 
-                    consectetur adipisicing elit. Amet, 
-                    eius atque. Consequuntur, 
-                    tempora excepturi? L
-                    aborum harum sunt officia cumque 
+                    consectetur adipisicing elit. 
+                    Amet, eius atque. 
+                    Consequuntur, 
+                    tempora excepturi? 
+                    Laborum harum sunt 
+                    officia cumque 
                     quibusdam eaque! 
-                    Enim est numquam, in laudantium d
+                    Enim est numquam, 
+                    in laudantium d
                     icta eius unde molestiae!
                 </div>
-            </div>
-
-        </div>
-        <div id="contents">
-            <div id="box"></div>
-            <div id="box1"></div>
-
         </div>
     </div>
 </body>
@@ -104,25 +96,4 @@
 </html>
 <script>
 
-    window.addEventListener('DOMContentLoaded', function () {
-        fnSideContents(1);
-    });
-
-    function fnSideContent(num) {
-        let side1 = document.getElementById("str_1");
-        let side2 = document.getElementById("str_2");
-        let side3 = document.getElementById("str_3");
-
-        side1.style.display = "none";
-        side2.style.display = "none";
-        side3.style.display = "none";
-
-        if (num === 1) {
-            Side1.style.display = "block";
-        } else if (num === 2) {
-            Side2.style.display = "block";
-        } else if (num === 3) {
-            Side3.style.display = "block";
-        }
-    }
 </script>
